@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEPOTEI - Ремонт бытовой техники</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #e8fbe8, #ffffff);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #007f5f, #2b9348);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    .logo-container img {
+      width: 80px;
+      animation: logoBounce 1.5s ease;
+      transition: transform 0.3s ease;
+    }
+    .logo-container img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+    .logo-container h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+    @keyframes logoBounce {
+      0% { transform: scale(0.5) translateY(-50px); opacity: 0; }
+      50% { transform: scale(1.1) translateY(10px); opacity: 1; }
+      100% { transform: scale(1) translateY(0); }
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    header .slogan {
+      margin-top: 15px;
+      font-size: 1.3em;
+      font-style: italic;
+      color: #d8f3dc;
+    }
+    header .experience {
+      margin-top: 10px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #b7e4c7;
+      animation: fadeBlink 2s infinite;
+    }
+    @keyframes fadeBlink {
+      0% { opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #007f5f;
+    }
+    .advantages {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+    .adv {
+      flex: 1 1 250px;
+      background: #2b9348;
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .discounts {
+      margin-top: 40px;
+      background: #d8f3dc;
+      border-left: 6px solid #2b9348;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1.1em;
+      color: #2b9348;
+    }
+    .gallery {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .gallery h2 {
+      margin-bottom: 20px;
+    }
+    .gallery img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 10px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #80ed99;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-form {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .contact-form button {
+      background: #2b9348;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .contact-form button:hover {
+      background: #55a630;
+    }
+    .telegram-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0088cc;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px #999;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+    .telegram-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="photo_2021-01-30_18-03-26.jpg" alt="Логотип">
+      <h1>NEPOTEI</h1>
+    </div>
+    <p>Быстро • Недорого • С гарантией</p>
+    <p class="slogan">Мы заботимся о вашей технике как никто другой</p>
+    <p class="experience">16 лет опыта работы</p>
+  </header>
+
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom: 20px;">Наши услуги</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Ремонт стиральных машин</h3>
+        <p>Выезд мастера, диагностика и ремонт любых брендов.</p>
+      </div>
+      <div class="card">
+        <h3>Ремонт холодильников</h3>
+        <p>Восстановим работоспособность в кратчайшие сроки.</p>
+      </div>
+      <div class="card">
+        <h3>Ремонт кондиционеров</h3>
+        <p>Чистка, заправка фреоном и ремонт всех моделей.</p>
+      </div>
+      <div class="card">
+        <h3>Ремонт кулеров</h3>
+        <p>Обслуживание и восстановление работы кулеров для воды.</p>
+      </div>
+      <div class="card">
+        <h3>Ремонт разной техники</h3>
+        <p>Мелкая и крупная бытовая техника — быстро и надёжно.</p>
+      </div>
+    </div>
+
+    <h2 style="text-align:center; margin:50px 0 20px;">Почему выбирают нас</h2>
+    <div class="advantages">
+      <div class="adv">Опыт более 16 лет</div>
+      <div class="adv">Выезд в день обращения</div>
+      <div class="adv">Гарантия от 6 до 12 месяцев</div>
+      <div class="adv">Доступные цены</div>
+    </div>
+
+    <div class="discounts">
+      <p><strong>Скидки до 30%</strong> для клиентов из малоимущих семей, инвалидов, пенсионеров и государственных учреждений.</p>
+    </div>
+
+    <div class="gallery">
+      <h2>Наши работы</h2>
+      <img src="2020-07-21.png" alt="Фото ремонта">
+    </div>
+
+    <div class="contact-form">
+      <h2>Свяжитесь с нами</h2>
+      <form>
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="Телефон" required>
+        <textarea rows="4" placeholder="Опишите проблему"></textarea>
+        <button type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>📞 Телефоны: <a href="tel:+998909098690">+998 (90) 909-86-90</a> | <a href="tel:+998994078690">+998 (99) 407-86-90</a></p>
+    <p>📍 Адрес: Ташкент, Чиланзар, 19 квартал, 56 дом</p>
+    <p>📲 Telegram: <a href="https://t.me/nepoteiservicecentr" target="_blank">@nepoteiservicecentr</a></p>
+    <p>&copy; 2025 NEPOTEI - Ремонт бытовой техники</p>
+  </footer>
+
+  <a href="https://t.me/nepoteiservicecentr" class="telegram-float" target="_blank">✈️</a>
+</body>
+</html>
